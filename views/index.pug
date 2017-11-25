@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title='restful-app'
+        link(rel='stylesheet', href='/dist/style.css')
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body
+        block header
+
+        .content
+            block content
+                div.app
+        block scripts
+            script(src="/dist/App.bundle.js" type="text/javascript")
