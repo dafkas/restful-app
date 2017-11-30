@@ -5,6 +5,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 /*
   webpack sees every file as a module.
@@ -72,7 +73,7 @@ const config = {
   // plugins: [uglify]
   plugins: [
     // here is where we tell it to output our css to a separate file
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('style.css')
   ]
 };
 // webpack is cranky about some packages using a soon to be deprecated API. shhhhhhh

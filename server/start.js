@@ -10,7 +10,6 @@ mongoose.connection.on('error', (err) => {
   console.error(`Error→ ${err.message}`);
 });
 
-console.log(mongoose);
 require('./models/Site');
 
 const app = require('./app');

@@ -1,16 +1,21 @@
 'use strict';
 import '../public/sass/style.scss';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';  
+import {Router, Route, browserHistory, Navigation} from 'react-router';
 
-class App extends React.Component {
-    render(){
-        return(
-            <div>
-                <h1>Hello worlddd!ddd</h1>
-            </div>
-        )
-    }
-}
 
-ReactDOM.render(<App />, document.querySelector('.app'));
+import CollectionScreen from './components/CollectionScreen';
+import DetailScreen from './components/DetailScreen';
+import LoginScreen from './components/LoginScreen';
+//in JSX comment : {*/ comment */}
+
+//routes
+ 
+ReactDOM.render(
+    <Router history={browserHistory}>
+        <Route path="/" component={LoginScreen}/>
+        <Route path="/collection" component={CollectionScreen}/>
+        <Route path="/collection/:site_id" component={DetailScreen}/>
+    </Router>, document.querySelector('.app')
+); 
