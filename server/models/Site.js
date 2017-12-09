@@ -9,12 +9,12 @@ const siteSchema = new mongoose.Schema({
     url: {
         type: String,
         trim: true,
-        required: 'Please enter a Description'
+        required: 'Please enter a url'
     },
-    date: {
+    description: {
         type: String,
         trim: true,
-        required: 'Please enter a Date'
+        required: 'Please enter a description'
     },
     _links: {
         self: {
@@ -24,6 +24,5 @@ const siteSchema = new mongoose.Schema({
             href: { },
         }
     },
-
 });
 module.exports = mongoose.model('Site', siteSchema);

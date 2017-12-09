@@ -17,5 +17,5 @@ ReactDOM.render(
         <Route path="/" component={LoginScreen}/>
         <Route path="/collection" component={CollectionScreen}/>
         <Route path="/collection/:site_id" component={DetailScreen}/>
-    </Router>, document.querySelector('.app')
+    </Router>
 ); 

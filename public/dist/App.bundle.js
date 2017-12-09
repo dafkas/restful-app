@@ -13761,7 +13761,7 @@ _reactDom2.default.render(_react2.default.createElement(
     _react2.default.createElement(_reactRouter.Route, { path: '/', component: _LoginScreen2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: '/collection', component: _CollectionScreen2.default }),
     _react2.default.createElement(_reactRouter.Route, { path: '/collection/:site_id', component: _DetailScreen2.default })
-), document.querySelector('.app'));
+));
 
 /***/ }),
 /* 118 */
