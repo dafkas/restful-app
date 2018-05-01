@@ -9733,7 +9733,8 @@ exports.WarningButton = exports.SecondaryButton = exports.PrimaryButton = export
 
 var _templateObject = _taggedTemplateLiteral(["\n  width: ", ";\n  height: ", ";\n  color: ", ";\n  background-color: #333;\n  font-size: ", ";\n  margin: 1em 0em;\n  border-radius: 4px;\n  border-color: ", ";\n  display: block;\n  margin: ", ";\n  cursor: pointer;\n"], ["\n  width: ", ";\n  height: ", ";\n  color: ", ";\n  background-color: #333;\n  font-size: ", ";\n  margin: 1em 0em;\n  border-radius: 4px;\n  border-color: ", ";\n  display: block;\n  margin: ", ";\n  cursor: pointer;\n"]),
     _templateObject2 = _taggedTemplateLiteral(["\n  color: white;\n  background: ", ";\n  &:hover {\n    background-color: #80a7a7;\n  }\n"], ["\n  color: white;\n  background: ", ";\n  &:hover {\n    background-color: #80a7a7;\n  }\n"]),
-    _templateObject3 = _taggedTemplateLiteral(["\n  color: white;\n  background: ", ";\n"], ["\n  color: white;\n  background: ", ";\n"]);
+    _templateObject3 = _taggedTemplateLiteral(["\n  color: white;\n  background: ", ";\n"], ["\n  color: white;\n  background: ", ";\n"]),
+    _templateObject4 = _taggedTemplateLiteral(["\n  color: white;\n  background: ", ";\n  border-color: ", ";\n"], ["\n  color: white;\n  background: ", ";\n  border-color: ", ";\n"]);
 
 var _react = __webpack_require__(15);
 
@@ -9767,7 +9768,7 @@ var PrimaryButton = exports.PrimaryButton = Button.extend(_templateObject2, _Col
 
 var SecondaryButton = exports.SecondaryButton = Button.extend(_templateObject3, _Colors2.default.secondary);
 
-var WarningButton = exports.WarningButton = Button.extend(_templateObject3, _Colors2.default.warning);
+var WarningButton = exports.WarningButton = Button.extend(_templateObject4, _Colors2.default.warning, _Colors2.default.warning);
 
 /***/ }),
 /* 111 */
@@ -41847,20 +41848,18 @@ var TextArea = _styledComponents2.default.textarea(_templateObject);
 
 var CreateFormWrapper = _styledComponents2.default.form(_templateObject2);
 
-// HINT: Reusability voor dit soort grote components, met dit soort
-// grote hoeveelheid functionaliteit doe je niet zo,
-// dat los je vaak op met HOC's (Higher Order Component), of render props
-// Inlezen:
+// HINT: Reusability voor dit soort grote components, met dit soort grote
+// hoeveelheid functionaliteit doe je niet zo, dat los je vaak op met HOC's
+// (Higher Order Component), of render props Inlezen:
 // - Higher order functions in JS
 // - JS Currying
-// - Use render props https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce?gi=a20aab779f98
-
-// HINT: We hebben de event handler verplaatst naar de parent
-// Deze child heeft nu geen state meer, en weet enkel van zijn props
-// Deze component heeft nu alleen een render functie
-// Wat betekent dat je er een Stateless functional component van kan maken (dit is letterlijk een functie)
-
-//HINT: We halen handlePost alvast uit props d.m.v destructuring
+// - Use render props
+// https://cdb.reacttraining.com/use-a-render-prop-50de598f11ce?gi=a20aab779f98
+// HINT: De event handler verplaatst naar de parent Deze child heeft nu geen
+// state meer, en weet enkel van zijn props Deze component heeft nu alleen een
+// render functie Wat betekent dat je er een Stateless functional component van
+// kan maken (dit is letterlijk een functie) HINT: Halen handlePost alvast uit
+// props d.m.v destructuring
 var CreateForm = function CreateForm(_ref) {
   var handleSubmit = _ref.handleSubmit;
   return _react2.default.createElement(
@@ -41870,8 +41869,7 @@ var CreateForm = function CreateForm(_ref) {
         e.preventDefault();
         handleSubmit(e);
       },
-      method: "POST"
-    },
+      method: "POST" },
     _react2.default.createElement(_Input2.default, {
       type: "text",
       name: "title",
@@ -41880,8 +41878,7 @@ var CreateForm = function CreateForm(_ref) {
       border: "1px solid #ccc",
       fontColor: "#ccc",
       placeholder: "Title",
-      placeholderColor: "#ccc"
-    }),
+      placeholderColor: "#ccc" }),
     _react2.default.createElement(_Input2.default, {
       type: "text",
       name: "url",
@@ -41890,8 +41887,7 @@ var CreateForm = function CreateForm(_ref) {
       border: "1px solid #ccc",
       fontColor: "#ccc",
       placeholder: "URL",
-      placeholderColor: "#ccc"
-    }),
+      placeholderColor: "#ccc" }),
     _react2.default.createElement(TextArea, { name: "description", placeholder: "Description" }),
     _react2.default.createElement(
       _Button.PrimaryButton,
@@ -41901,8 +41897,7 @@ var CreateForm = function CreateForm(_ref) {
         fontSize: "14px",
         width: "39.9em",
         height: "2.7em",
-        color: "#fff"
-      },
+        color: "#fff" },
       "Save"
     )
   );
@@ -41975,6 +41970,13 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _templateObject = _taggedTemplateLiteral(["\n  background-color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 50px 100px 50px;\n"], ["\n  background-color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 50px 100px 50px;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  background-color: #efefef;\n  width: 70%;\n  margin: 0 auto;\n  margin-top: -50px;\n  padding: 25px;\n  box-shadow: 2px 2px 5px 1px gray;\n"], ["\n  background-color: #efefef;\n  width: 70%;\n  margin: 0 auto;\n  margin-top: -50px;\n  padding: 25px;\n  box-shadow: 2px 2px 5px 1px gray;\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  display: block;\n  padding: 10px 25px 10px 25px;\n  border-radius: 5px;\n  background-color: #f7f7f7;\n  margin: 1em 0em;\n  cursor: pointer;\n  &:hover {\n    background-color: #fff;\n  }\n"], ["\n  display: block;\n  padding: 10px 25px 10px 25px;\n  border-radius: 5px;\n  background-color: #f7f7f7;\n  margin: 1em 0em;\n  cursor: pointer;\n  &:hover {\n    background-color: #fff;\n  }\n"]),
+    _templateObject4 = _taggedTemplateLiteral(["\n  font-family: \"Open sans\";\n  font-weight: 400;\n  font-size: 20px;\n  margin-bottom: -15px;\n"], ["\n  font-family: \"Open sans\";\n  font-weight: 400;\n  font-size: 20px;\n  margin-bottom: -15px;\n"]),
+    _templateObject5 = _taggedTemplateLiteral(["\n  font-family: \"Open sans\";\n  font-size: 18px;\n  border-top: 2px solid #efefef;\n  padding-top: 5px;\n  color: gray;\n  text-description: underline;\n"], ["\n  font-family: \"Open sans\";\n  font-size: 18px;\n  border-top: 2px solid #efefef;\n  padding-top: 5px;\n  color: gray;\n  text-description: underline;\n"]),
+    _templateObject6 = _taggedTemplateLiteral(["\n  font-family: \"Open sans\";\n  font-size: 16px;\n"], ["\n  font-family: \"Open sans\";\n  font-size: 16px;\n"]);
+
 var _react = __webpack_require__(15);
 
 var _react2 = _interopRequireDefault(_react);
@@ -41985,7 +41987,15 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouter = __webpack_require__(157);
 
+var _styledComponents = __webpack_require__(65);
+
+var _styledComponents2 = _interopRequireDefault(_styledComponents);
+
 var _Button = __webpack_require__(110);
+
+var _Colors = __webpack_require__(111);
+
+var _Colors2 = _interopRequireDefault(_Colors);
 
 var _Api = __webpack_require__(167);
 
@@ -41996,6 +42006,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var ButtonsWrapper = _styledComponents2.default.div(_templateObject, _Colors2.default.secondary);
+
+var ItemWrapper = _styledComponents2.default.div(_templateObject2);
+
+var CollectionDetails = _styledComponents2.default.div(_templateObject3);
+
+var CollectionTitle = _styledComponents2.default.p(_templateObject4);
+
+var CollectionUrl = _styledComponents2.default.p(_templateObject5);
+
+var CollectionDescription = _styledComponents2.default.p(_templateObject6);
 
 var CollectionScreen = function (_React$Component) {
   _inherits(CollectionScreen, _React$Component);
@@ -42050,47 +42074,55 @@ var CollectionScreen = function (_React$Component) {
         "collectionItem",
         null,
         _react2.default.createElement(
-          "collectionDetails",
+          ButtonsWrapper,
           null,
           _react2.default.createElement(
-            "h3",
-            null,
-            this.state.site.title
+            _Button.PrimaryButton,
+            {
+              name: "submit",
+              type: "submit",
+              fontSize: "16px",
+              width: "9em",
+              height: "3em",
+              color: "#fff",
+              onClick: this._redirectToEdit },
+            "Edit"
           ),
           _react2.default.createElement(
-            "h3",
-            null,
-            this.state.site.url
-          ),
-          _react2.default.createElement(
-            "h3",
-            null,
-            this.state.site.description
+            _Button.WarningButton,
+            {
+              name: "submit",
+              type: "submit",
+              fontSize: "16px",
+              width: "9em",
+              height: "3em",
+              color: "#fff",
+              onClick: this._handleDelete },
+            "Delete"
           )
         ),
         _react2.default.createElement(
-          _Button.SecondaryButton,
-          {
-            name: "submit",
-            type: "submit",
-            fontSize: "16px",
-            width: "9em",
-            height: "3em",
-            color: "#fff",
-            onClick: this._redirectToEdit },
-          "Edit"
-        ),
-        _react2.default.createElement(
-          _Button.WarningButton,
-          {
-            name: "submit",
-            type: "submit",
-            fontSize: "16px",
-            width: "9em",
-            height: "3em",
-            color: "#fff",
-            onClick: this._handleDelete },
-          "Delete"
+          ItemWrapper,
+          null,
+          _react2.default.createElement(
+            CollectionDetails,
+            null,
+            _react2.default.createElement(
+              CollectionTitle,
+              null,
+              this.state.site.title
+            ),
+            _react2.default.createElement(
+              CollectionUrl,
+              null,
+              this.state.site.url
+            ),
+            _react2.default.createElement(
+              CollectionDescription,
+              null,
+              this.state.site.description
+            )
+          )
         )
       );
     }
@@ -42114,8 +42146,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(["\n  display: block;\n  width: 40.5em;\n  height: 10em;\n"], ["\n  display: block;\n  width: 40.5em;\n  height: 10em;\n"]),
-    _templateObject2 = _taggedTemplateLiteral(["\n  display: block;\n"], ["\n  display: block;\n"]);
+var _templateObject = _taggedTemplateLiteral(["\n  background-color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 50px 100px 50px;\n"], ["\n  background-color: ", ";\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 30px 50px 100px 50px;\n"]),
+    _templateObject2 = _taggedTemplateLiteral(["\n  display: block;\n"], ["\n  display: block;\n"]),
+    _templateObject3 = _taggedTemplateLiteral(["\n  display: block;\n  width: 48.6em;\n  height: 10em;\n  background-color: #34495f;\n  border-radius: 7px;\n  border: 1px solid #ccc;\n  color: #ccc;\n  padding: 10px;\n  &::placeholder {\n    color: #ccc;\n  }\n"], ["\n  display: block;\n  width: 48.6em;\n  height: 10em;\n  background-color: #34495f;\n  border-radius: 7px;\n  border: 1px solid #ccc;\n  color: #ccc;\n  padding: 10px;\n  &::placeholder {\n    color: #ccc;\n  }\n"]);
 
 var _react = __webpack_require__(15);
 
@@ -42132,6 +42165,10 @@ var _styledComponents = __webpack_require__(65);
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
 var _Button = __webpack_require__(110);
+
+var _Colors = __webpack_require__(111);
+
+var _Colors2 = _interopRequireDefault(_Colors);
 
 var _Input = __webpack_require__(166);
 
@@ -42151,9 +42188,11 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
-var TextArea = _styledComponents2.default.textarea(_templateObject);
+var CreateFormWrapper = _styledComponents2.default.div(_templateObject, _Colors2.default.secondary);
 
 var EditForm = _styledComponents2.default.form(_templateObject2);
+
+var TextArea = _styledComponents2.default.textarea(_templateObject3);
 
 var CollectionScreen = function (_React$Component) {
   _inherits(CollectionScreen, _React$Component);
@@ -42187,7 +42226,9 @@ var CollectionScreen = function (_React$Component) {
       });
     };
 
-    _this.state = { site: [] };
+    _this.state = {
+      site: []
+    };
     return _this;
   }
 
@@ -42203,19 +42244,20 @@ var CollectionScreen = function (_React$Component) {
         _this2.setState({ site: data });
       });
     }
-    //FIX: HandleChange error fixxen
-    //ERROR: 'Cannot convert undefined or null to object'
+    // FIX: HandleChange error fixxen ERROR: 'Cannot convert undefined or null to
+    // object'
 
   }, {
     key: "render",
 
 
-    //FIX: Oplossing verzinnen om createform te hergebruiken met ingeladen content van URL.
+    // FIX: Oplossing verzinnen om createform te hergebruiken met ingeladen content
+    // van URL.
     value: function render() {
       var _this3 = this;
 
       return _react2.default.createElement(
-        "div",
+        CreateFormWrapper,
         null,
         _react2.default.createElement(
           EditForm,
@@ -42223,37 +42265,45 @@ var CollectionScreen = function (_React$Component) {
             onSubmit: function onSubmit(e) {
               e.preventDefault();
               _this3._handleSubmit(e);
-            }
-          },
+            } },
           _react2.default.createElement(_Input2.default, {
             type: "text",
             name: "title",
+            backgroundColor: "#34495f",
+            borderRadius: "7px",
+            border: "1px solid #ccc",
+            fontColor: "#ccc",
+            placeholder: "Title",
+            placeholderColor: "#ccc",
             value: this.state.site.title || "",
             onChange: function onChange(e) {
               return _this3._handleChange(e);
-            }
-          }),
+            } }),
           _react2.default.createElement(_Input2.default, {
             type: "text",
             name: "url",
+            backgroundColor: "#34495f",
+            borderRadius: "7px",
+            border: "1px solid #ccc",
+            fontColor: "#ccc",
+            placeholder: "Title",
+            placeholderColor: "#ccc",
             value: this.state.site.url || "",
-            onChange: this._handleChange
-          }),
+            onChange: this._handleChange }),
           _react2.default.createElement(TextArea, {
             name: "description",
+            placeholder: "Description",
             value: this.state.site.description || "",
-            onChange: this._handleChange
-          }),
+            onChange: this._handleChange }),
           _react2.default.createElement(
             _Button.PrimaryButton,
             {
               name: "submit",
               type: "submit",
-              fontSize: "16px",
-              width: "5em",
-              height: "1.7em",
-              color: "#fff"
-            },
+              fontSize: "14px",
+              width: "39.9em",
+              height: "2.7em",
+              color: "#fff" },
             "Save"
           )
         )

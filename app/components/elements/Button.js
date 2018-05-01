@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Colors from "../../styles/Colors";
 
-export const Button = styled.button`
+export const Button = styled.button `
   width: ${props => props.width};
   height: ${props => props.height};
   color: ${props => props.color};
@@ -17,7 +17,7 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const PrimaryButton = Button.extend`
+export const PrimaryButton = Button.extend `
   color: white;
   background: ${Colors.primary};
   &:hover {
@@ -25,12 +25,13 @@ export const PrimaryButton = Button.extend`
   }
 `;
 
-export const SecondaryButton = Button.extend`
+export const SecondaryButton = Button.extend `
   color: white;
   background: ${Colors.secondary};
 `;
 
-export const WarningButton = Button.extend`
+export const WarningButton = Button.extend `
   color: white;
   background: ${Colors.warning};
+  border-color: ${Colors.warning};
 `;
